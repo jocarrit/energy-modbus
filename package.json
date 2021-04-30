@@ -11,8 +11,12 @@
     "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
+    "@headlessui/react": "^1.1.1",
+    "@heroicons/react": "^1.0.1",
+    "chart.js": "^3.2.0",
     "electron-serve": "^1.1.0",
-    "electron-store": "^7.0.2"
+    "electron-store": "^7.0.2",
+    "react-chartjs-2": "^3.0.3"
   },
   "devDependencies": {
     "@types/node": "^14.14.20",
