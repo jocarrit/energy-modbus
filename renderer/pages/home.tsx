@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Fragment } from 'react'
@@ -6,10 +6,20 @@ import { Disclosure } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { LightningBoltIcon } from '@heroicons/react/solid'
 import Linechart from '../components/LineChart'
+import { ipcRenderer } from "electron";
 
 const navigation = ['Dashboard']
 
+
 function Home() {
+  const [ current, setCurrent ] = useState(0)
+  useEffect(() => {
+    ipcRenderer.on("current", (event, arg) => {
+      console.log(arg)
+      setCurrent(arg)
+    })
+  })
+
   return (
     <div>
       <Disclosure as="nav" className="bg-gray-800">
@@ -112,7 +122,7 @@ function Home() {
                     </div>
                     <div>
                       <p className="font-bold">Corriente</p>
-                      <h1 className="text-5xl text-indigo-800">300<span className="text-3xl text-gray-400">ma</span></h1>
+                      <h1 className="text-5xl text-indigo-800">{ current }<span className="text-3xl text-gray-400">ma</span></h1>
                     </div>
             </div>
             <div className="container max-h-full m-4 bg-white shadow-lg sm:rounded-3xl sm:p-10">
