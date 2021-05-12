@@ -1,20 +1,8 @@
 <p align="center"><img src="https://i.imgur.com/a9QWW0v.png"></p>
 
-## Usage
+## Electrical Energy Monitor for desktop
 
-### Create an App
-
-```
-# with npx
-$ npx create-nextron-app my-app --example with-typescript-tailwindcss
-
-# with yarn
-$ yarn create nextron-app my-app --example with-typescript-tailwindcss
-
-# with pnpx
-$ pnpx create-nextron-app my-app --example with-typescript-tailwindcss
-```
-
+This is a desktop app that uses a modbus RTU instrument connected by USB for reading electrical variables
 ### Install Dependencies
 
 ```
