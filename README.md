@@ -1,5 +1,3 @@
-<p align="center"><img src="https://i.imgur.com/a9QWW0v.png"></p>
-
 ## Electrical Energy Monitor for desktop
 
 This is a desktop app that uses a modbus RTU instrument connected by USB for reading electrical variables
